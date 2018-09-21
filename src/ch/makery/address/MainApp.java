@@ -131,6 +131,7 @@ public class MainApp extends Application {
             // Отображаем диалоговое окно и ждём, пока пользователь его не закроет
             dialogStage.showAndWait();
 
+            
             return controller.isOkClicked();
         } catch (IOException e) {
             e.printStackTrace();
