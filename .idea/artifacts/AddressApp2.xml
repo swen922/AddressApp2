@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="AddressApp2">
+    <output-path>$PROJECT_DIR$/out/artifacts/AddressApp2</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="ch.makery.address.MainApp" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="dmg" />
+        <option name="title" value="Address App" />
+        <option name="vendor" value="some vendor" />
+        <option name="version" value="1.0" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="AddressApp2.jar">
+        <element id="module-output" name="AddressApp2" />
+      </element>
+    </root>
+  </artifact>
+</component>

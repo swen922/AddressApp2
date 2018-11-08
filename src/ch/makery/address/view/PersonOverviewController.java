@@ -1,11 +1,10 @@
 package ch.makery.address.view;
 
 import ch.makery.address.util.DateUtil;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import ch.makery.address.MainApp;
 import ch.makery.address.model.Person;
 
@@ -31,6 +30,7 @@ public class PersonOverviewController {
     private Label cityLabel;
     @FXML
     private Label birthdayLabel;
+
 
     // Reference to the main application.
     private MainApp mainApp;
@@ -58,6 +58,12 @@ public class PersonOverviewController {
         // Слушаем изменения выбора, и при изменении отображаем
         // дополнительную информацию об адресате.
         personTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> showPersonDetails(newValue));
+        personTable.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Person>() {
+            @Override
+            public void changed(ObservableValue<? extends Person> observable, Person oldValue, Person newValue) {
+
+            }
+        });
     }
 
     /**
